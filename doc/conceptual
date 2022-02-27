@@ -1,0 +1,20 @@
+@startuml
+class camera
+class picture
+class pc
+class robot
+class wall
+class floor
+class graffiti
+class user
+
+camera -right-> picture: make
+pc -right- robot : call
+robot -- wall: paint
+robot -- floor: paint
+wall -- graffiti
+floor -- graffiti
+pc -up-> user: call
+user --> pc: answer
+picture <-right- pc: get
+@enduml
