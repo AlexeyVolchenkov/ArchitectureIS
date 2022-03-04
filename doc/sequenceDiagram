@@ -1,0 +1,19 @@
+@startuml
+actor User
+participant Camera
+participant PC
+participant Robot
+Camera -> PC : Camera()
+PC -> PC : GraffitiDetect()
+PC -> User : callUser()
+User -> PC : answerPC()
+PC -> Robot: MoveForward()
+PC -> Robot: TurnRight()
+PC -> Robot: TurnLeft()
+PC -> Robot: MoveArmLeft()
+PC -> Robot: MoveArmRight()
+PC -> Robot: MoveArmUp()
+PC -> Robot: MoveArmDown()
+PC -> Robot: StartPainting()
+PC -> Robot: StopPainting()
+@enduml
