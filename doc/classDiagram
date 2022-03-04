@@ -1,0 +1,23 @@
+@startuml
+PC o-right- Robot: has
+Camera o-right- PC: has
+Class Camera{
+Camera()
+}
+Class Robot{
+MoveForward()
+TurnRight()
+TurnLeft()
+MoveArmLeft()
+MoveArmRight()
+MoveArmUp()
+MoveArmDown()
+StartPainting()
+StopPainting()
+}
+Class PC{
+CallUser()
+CallRobot()
+GraffitiDetect()
+}
+@enduml
