@@ -1,0 +1,13 @@
+@startuml
+(OFF)-up-> (ON) : /press_start
+(Waiting) --> (OFF) : /press_stop
+(ON) --> (Waiting) : waiting for the command
+(Waiting) -> (Rotating) : command rotating
+(Rotating) -> (Moving) : command moving
+(Moving) -> (Cleaning) : command cleaning
+(Cleaning) -> (Waiting)
+(Waiting) -down-> (Error)
+(Rotating) -down-> (Error)
+(Moving) -down-> (Error)
+(Cleaning) -down-> (Error)
+@enduml
