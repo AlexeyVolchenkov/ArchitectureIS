@@ -1,0 +1,62 @@
+@startuml
+System o-- Robot: has
+System o-- PC: has
+System o-- Hand: has
+System o-- Spray: has
+Camera o--Image: has
+Event o-- Robot: has
+CommandReceiver o-- NetCommand: has
+CommandReceiver o-- KeyBoardCommand: has
+System o-- Camera: has
+System o-- CommandReceiver: has
+
+Class Event{
+}
+Class Image{
+Camera cm
+}
+Class Camera{
+Image get()
+}
+Class CommandReceiver{
+getCommand()
+}
+Class NetCommand{
+}
+Class KeyBoardCommand{
+}
+Class Robot{
+on()
+off()
+moveOn()
+moveOff()
+turnRight()
+turnLeft()
+}
+Class PC{
+CallUser()
+CallRobot()
+GraffitiDetect()
+}
+class Hand{
+Up()
+Down()
+Left()
+Right()
+}
+class Spray{
+On()
+Off()
+}
+class System{
+Camera ca;
+PC pc;
+Robot robot;
+Hand ha;
+Spray sp;
+press_start()
+set_hand()
+do_spray()
+press_stop()
+}
+@enduml
